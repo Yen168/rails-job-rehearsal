@@ -8,4 +8,6 @@ Rails Rehearsal for interview.
 
 * ORM (belong_to, has_many)
 
+* before_action
+
 
