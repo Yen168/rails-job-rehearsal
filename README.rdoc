@@ -20,7 +20,7 @@ https://secure-woodland-8209.herokuapp.com
 * has_many, belongs_to, :author & :owner into model
 
 * group member control
-- rails g model group_user group_id:integer user_id:integer
+rails g model group_user group_id:integer user_id:integer
 
 * macro :participated_groups, is_member_of?(group)
 
@@ -34,4 +34,5 @@ https://secure-woodland-8209.herokuapp.com
 
 
 Q: @group.posts & @group.posts.all
+A: .all -> SQL Select *
 
