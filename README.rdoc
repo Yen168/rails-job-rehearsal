@@ -1,6 +1,7 @@
 == README
+= Rails Rehearsal for interview.
 
-Rails Rehearsal for interview.
+https://secure-woodland-8209.herokuapp.com/
 
 * CRUD
 
@@ -11,5 +12,9 @@ Rails Rehearsal for interview.
 * before_action
 
 * gem devise
+
+* heruku gem pg, rails_12factor 
+
+* heroku run rake db:migrate
 
 
