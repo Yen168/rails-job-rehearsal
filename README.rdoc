@@ -17,4 +17,5 @@ https://secure-woodland-8209.herokuapp.com
 
 * heroku run rake db:migrate
 
+* has_many, belongs_to, :author & :owner into model
 
