@@ -13,20 +13,20 @@ class GroupsController < ApplicationController
 
   def new
 
-    @group = Group.new
+    @group = current_user.groups.new
 
   end
 
   def edit
 
-    @group = Group.find(params[:id])
+    @group = current_user.groups.find(params[:id])
 
 
   end
 
   def create
 
-    @group = Group.new(group_params)
+    @group = current_user.groups.new(group_params)
 
     if @group.save 
       name = @group.title
@@ -39,7 +39,7 @@ class GroupsController < ApplicationController
 
   def update
 
-    @group = Group.find(params[:id])
+    @group = current_user.groups.find(params[:id])
 
     if @group.update(group_params)
       redirect_to groups_path, :notice => 'OK Edit'

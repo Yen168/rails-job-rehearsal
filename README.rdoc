@@ -1,7 +1,7 @@
-== README
+
 = Rails Rehearsal for interview.
 
-https://secure-woodland-8209.herokuapp.com/
+https://secure-woodland-8209.herokuapp.com
 
 * CRUD
 
