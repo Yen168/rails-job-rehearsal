@@ -4,10 +4,12 @@ Rails Rehearsal for interview.
 
 * CRUD
 
-* bootstrap-sass, simple_form
+* gem bootstrap-sass, simple_form
 
 * ORM (belong_to, has_many)
 
 * before_action
+
+* gem devise
 
 
