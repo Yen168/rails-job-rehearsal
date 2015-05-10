@@ -1,11 +1,33 @@
-<div class="col-md-4 col-md-offset-4">
-<h1>Show</h1>
+<div class="col-md-12">
+  <div class="group">
+    <%= link_to("New Post", new_group_post_path(@group) , :class => "btn btn-warning pull-right")%>
+     
+  </div>
+  <h2> <%= @group.title %> </h2>
+  <p> <%= @group.description %> </p> 
 
-<hr>
-<%= simple_form_for @group do |f| %>
-  <%= f.input :title, :input_html => { :class => "form-control"} %>
-  <%= f.input :description, :input_html => { :class => "form-control"} %>
-<hr>
- 
-  <% end %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Post</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %> 
+        <tr>
+          <td> <%= post.content %> </td>
+          <td> <%= link_to("Edit", 
+                           edit_group_post_path(post.group, post), 
+                           :class => "btn btn-default btn-xs")%>
+
+               <%= link_to("Delete", 
+                           group_post_path(post.group, post), 
+                           :class => "btn btn-default btn-xs ",
+                           :method => :delete,
+                           data: { confirm: "Are you sure?" } )%></td>
+        </tr>
+      <% end %> 
+    </tbody>
+  </table>
 </div>

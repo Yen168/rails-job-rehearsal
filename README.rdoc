@@ -4,6 +4,8 @@ Rails Rehearsal for interview.
 
 * CRUD
 
-* Bootstrap
+* bootstrap-sass, simple_form
+
+* ORM (belong_to, has_many)
 
 
