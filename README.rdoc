@@ -19,3 +19,19 @@ https://secure-woodland-8209.herokuapp.com
 
 * has_many, belongs_to, :author & :owner into model
 
+* group member control
+- rails g model group_user group_id:integer user_id:integer
+
+* macro :participated_groups, is_member_of?(group)
+
+* def join!(group) participated_groups << group end (user) 
+
+* (route) member 
+	member do
+      post :join
+      post :quit
+    end
+
+
+Q: @group.posts & @group.posts.all
+

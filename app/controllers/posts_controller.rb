@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_group
 
+  before_action :member_required, :only => [:new, :create ] 
 	
   def new
 
@@ -60,6 +61,13 @@ class PostsController < ApplicationController
 
   def find_group
       @group = Group.find(params[:group_id])
+  end
+
+  def member_required
+    if !current_user.is_member_of?(@group)
+      flash[:warning] = "Not a group member, Sorry! Join us, please"
+      redirect_to group_path(@group)
+    end
   end
 
 end
