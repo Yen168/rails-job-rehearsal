@@ -27,11 +27,10 @@ rails g model group_user group_id:integer user_id:integer
 * def join!(group) participated_groups << group end (user) 
 
 * (route) member 
-	
-	member do
-      post :join
-      post :quit
-    end
+member do
+	post :join
+	post :quit
+end
 
 * .in_time_zone('Eastern Time (US & Canada)')
 
@@ -39,7 +38,7 @@ rails g model group_user group_id:integer user_id:integer
 
 * bye bye group.posts.count because SQL === SELECT COUNT(*) === FROM 'posts' WHERE 'posts'.'group_id' = 1..
 
-* => rails g migration add_posts_count_to_group posts_count:integer
+=> rails g migration add_posts_count_to_group posts_count:integer
 
 * counter_cache => counter_cache: :posts_count 
 
@@ -47,6 +46,10 @@ Q: group.posts.size & group.posts.count
 A: count => SQL
 
 * delete group === delte all posts =>  has_many :posts, :dependent => :destroy
+
+* model scope 
+scope :recent, -> { order("updated_at DESC") }
+
 
 
 
