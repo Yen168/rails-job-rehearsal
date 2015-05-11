@@ -5,7 +5,7 @@ class Account::PostsController < ApplicationController
   def index
     # scope
     #@posts = current_user.posts.order("updated_at DESC")
-    @posts = current_user.posts..recent
+    @posts = current_user.posts.recent
   end
 
 end
