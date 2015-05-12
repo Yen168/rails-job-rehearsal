@@ -38,7 +38,7 @@ end
 
 * bye bye group.posts.count because SQL === SELECT COUNT(*) === FROM 'posts' WHERE 'posts'.'group_id' = 1..
 
-=> rails g migration add_posts_count_to_group posts_count:integer
+rails g migration add_posts_count_to_group posts_count:integer
 
 * counter_cache => counter_cache: :posts_count 
 
