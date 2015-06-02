@@ -69,5 +69,7 @@ customizer
  has_many :members, :through => :group_users, :source => :user
 *User.find(params[:id]).groups => User.find(params[:id]).owners
 
-UPDATE:
+#UPDATE:
 gem "simple_form", "~> 3.1.0.rc2", github: "plataformatec/simple_form", branch: "master"
+
+rails generate simple_form:install --bootstrap
